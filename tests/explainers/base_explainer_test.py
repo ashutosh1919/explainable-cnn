@@ -1,7 +1,7 @@
 import pytest
 import torch
 import torchvision.models as models
-from explainable_cnn.explainers.base_explainer import BaseExplainer
+from explainable_cnn.explainers import BaseExplainer
 
 
 class TestBaseExplainer:
@@ -36,3 +36,13 @@ class TestBaseExplainer:
         assert 'label0' in rev_map and rev_map['label0'] == 0
         assert 'label1' in rev_map and rev_map['label1'] == 1
         assert len(rev_map) == 2
+    
+    @pytest.mark.parametrize("raw_layers, unique_layers",
+                             [(["relu", "layer1", "layer2", "relu"],
+                               ["relu", "layer1", "layer2"]),
+                              (["relu", "layer1"],
+                               ["relu", "layer1"])])
+    def test_get_unique_layers(self, raw_layers, unique_layers):
+        cls = self.__class__
+        output_layers = cls.obj.get_unique_layers(raw_layers)
+        assert output_layers == unique_layers

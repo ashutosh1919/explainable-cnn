@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 
-from explainable_cnn.validators.base_validator import BaseValidator
+from explainable_cnn.validators import BaseValidator
 
 
 class BaseExplainer:
@@ -17,7 +17,8 @@ class BaseExplainer:
             device: `str` containing the type of device to execute the code
         """
         
-        self.validator = BaseValidator()
+        if not hasattr(self, 'validator'):
+            self.validator = BaseValidator()
         self.validator.assert_type(model, nn.Module)
         self.validator.assert_type(device, str)
         
@@ -50,3 +51,50 @@ class BaseExplainer:
         for index, label in class_map.items():
             reverse_class_mapping[label] = index
         return reverse_class_mapping
+    
+    def get_unique_layers(self, layer_names):
+        """
+        Remove duplicates from the `layer_names`
+
+        Args:
+            layer_names: `list` containing names of layers.
+        
+        Returns: `list` containing unique layer names.
+        """
+        unique_layers = []
+        for layer in layer_names:
+            if layer not in unique_layers:
+                unique_layers.append(layer)
+        return unique_layers
+
+    def get_label_name_from_index(self, index):
+        """
+        Extracts name of a label from index.
+
+        Args:
+            index: `int` containing index of label.
+        
+        Returns: `str` containing name of label.
+        """
+        self.validator.assert_type(index, int)
+
+        if not hasattr(self, 'class_map'):
+            raise RuntimeError("Object doesn't have property 'class_map'")
+        
+        return self.class_map[index]
+    
+    def get_label_index_from_name(self, name):
+        """
+        Extracts index of label from name.
+
+        Args:
+            name: `str` containing name of label.
+        
+        Returns: `int` containing index of label.
+        """
+        self.validator.assert_type(name, str)
+
+        if not hasattr(self, 'reverse_class_map'):
+            raise RuntimeError("Object doesn't have property 'reverse_class_map'")
+        
+        return self.reverse_class_map[name]
