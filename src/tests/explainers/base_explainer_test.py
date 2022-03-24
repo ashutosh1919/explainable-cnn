@@ -1,7 +1,7 @@
 import pytest
 import torch
 import torchvision.models as models
-from explainable_cnn.explainers import BaseExplainer
+from explainable_cnn import BaseExplainer
 
 
 class TestBaseExplainer:

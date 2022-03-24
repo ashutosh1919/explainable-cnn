@@ -1,7 +1,7 @@
 import pytest
 import torchvision
 import torchvision.models as models
-from explainable_cnn.explainers import CNNExplainer
+from explainable_cnn import CNNExplainer
 
 
 class TestCNNExplainer:
