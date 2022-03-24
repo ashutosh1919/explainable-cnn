@@ -71,7 +71,9 @@ class GuidedBackPropagation(BackPropagation):
                 return (F.relu(grad_in[0]),)
 
         for module in self.model.named_modules():
-            self.handlers.append(module[1].register_backward_hook(backward_hook))
+            self.handlers.append(
+                module[1].register_backward_hook(backward_hook)
+            )
 
 
 class Deconvnet(BackPropagation):
@@ -90,12 +92,15 @@ class Deconvnet(BackPropagation):
                 return (F.relu(grad_out[0]),)
 
         for module in self.model.named_modules():
-            self.handlers.append(module[1].register_backward_hook(backward_hook))
+            self.handlers.append(
+                module[1].register_backward_hook(backward_hook)
+            )
 
 
 class GradCAM(_BaseWrapper):
     """
-    "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization"
+    Grad-CAM: Visual Explanations from Deep Networks via
+    Gradient-based Localization
     https://arxiv.org/pdf/1610.02391.pdf
     Look at Figure 2 on page 4
     """
@@ -118,11 +123,16 @@ class GradCAM(_BaseWrapper):
 
             return backward_hook
 
-        # If any candidates are not specified, the hook is registered to all the layers.
+        # If any candidates are not specified
+        # the hook is registered to all the layers.
         for name, module in self.model.named_modules():
             if self.candidate_layers is None or name in self.candidate_layers:
-                self.handlers.append(module.register_forward_hook(save_fmaps(name)))
-                self.handlers.append(module.register_backward_hook(save_grads(name)))
+                self.handlers.append(
+                    module.register_forward_hook(save_fmaps(name))
+                )
+                self.handlers.append(
+                    module.register_backward_hook(save_grads(name))
+                )
 
     def _find(self, pool, target_layer):
         if target_layer in pool.keys():
@@ -151,10 +161,11 @@ class GradCAM(_BaseWrapper):
 
 
 def occlusion_sensitivity(
-    model, images, ids, mean=None, patch=35, stride=1, n_batches=128
+    model, images, ids, mean=None, patch=36, stride=1, n_batches=128
 ):
     """
-    "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization"
+    Grad-CAM: Visual Explanations from Deep Networks
+    via Gradient-based Localization
     https://arxiv.org/pdf/1610.02391.pdf
     Look at Figure A5 on page 17
     Originally proposed in:
@@ -163,7 +174,6 @@ def occlusion_sensitivity(
     """
 
     torch.set_grad_enabled(False)
-    model.eval()
     mean = mean if mean else 0
     patch_H, patch_W = patch if isinstance(patch, Sequence) else (patch, patch)
     pad_H, pad_W = patch_H // 2, patch_W // 2
@@ -192,9 +202,13 @@ def occlusion_sensitivity(
     for i in tqdm(range(0, len(anchors), n_batches), leave=False):
         batch_images = []
         batch_ids = []
-        for grid_h, grid_w in anchors[i : i + n_batches]:
+        for grid_h, grid_w in anchors[i: i + n_batches]:
             images_ = images.clone()
-            images_[..., grid_h : grid_h + patch_H, grid_w : grid_w + patch_W] = mean
+            images_[
+                ...,
+                grid_h: grid_h + patch_H,
+                grid_w: grid_w + patch_W
+            ] = mean
             batch_images.append(images_)
             batch_ids.append(ids)
         batch_images = torch.cat(batch_images, dim=0)
