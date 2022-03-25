@@ -46,11 +46,6 @@ guided_grad_cam = x_cnn.get_guided_grad_cam(...)
     <img src="https://github.com/ashutosh1919/explainable-cnn/blob/main/data/outputs/explainable-cnn-output.png" align="center" height="1000px"></img>
 </p>
 
-### References
-
-<a href="https://arxiv.org/pdf/1610.02391.pdf"> Grad-CAM: Visual Explanations from Deep Networks
-via Gradient-based Localization</a>
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -71,3 +66,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+### References
+
+<a href="https://arxiv.org/pdf/1610.02391.pdf"> Grad-CAM: Visual Explanations from Deep Networks
+via Gradient-based Localization</a>
