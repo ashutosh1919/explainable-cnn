@@ -20,6 +20,17 @@
         "design",
         "research"
       ]
+    },
+    {
+      "login": "L-Pandey",
+      "name": "Lalit Pandey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90662028?v=4",
+      "profile": "https://github.com/L-Pandey",
+      "contributions": [
+        "code",
+        "design",
+        "research"
+      ]
     }
   ],
   "contributorsPerLine": 7
