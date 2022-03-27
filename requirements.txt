@@ -1,0 +1,8 @@
+torch==1.10.0
+torchvision==0.2.2
+pytest
+pycodestyle
+matplotlib
+opencv-python
+numpy
+tqdm
