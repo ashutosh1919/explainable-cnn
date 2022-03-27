@@ -8,6 +8,7 @@ Its a common notion that a Deep Learning model is considered as a black box. Wor
 <p align="center">
 <img src = "https://github.com/ashutosh1919/explainable-cnn/blob/main/data/architecture.png"></img>
 </p>
+:star: Star us on GitHub — it helps!
 
 ### Usage
 
