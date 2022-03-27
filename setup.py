@@ -15,7 +15,7 @@ setuptools.setup(
     url="https://github.com/ashutosh1919/explainable-cnn",
     py_modules=["explainable_cnn"],
     project_urls={
-        "Bug Tracker": 
+        "Bug Tracker":
             "https://github.com/ashutosh1919/explainable-cnn/issues",
     },
     classifiers=[
