@@ -20,7 +20,7 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pycodestyle
       run: |
-        pylint ./
+        pycodestyle ./
     - name: Running automated tests to validate compatibility
       run: |
         pytest src/tests/
