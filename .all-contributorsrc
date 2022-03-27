@@ -27,9 +27,11 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/90662028?v=4",
       "profile": "https://github.com/L-Pandey",
       "contributions": [
-        "research"
+        "research",
+        "doc"
       ]
     }
   ],
-  "contributorsPerLine": 5
+  "contributorsPerLine": 5,
+  "skipCi": true
 }
