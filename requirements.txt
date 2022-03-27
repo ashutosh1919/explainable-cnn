@@ -6,3 +6,4 @@ matplotlib
 opencv-python
 numpy
 tqdm
+dbus-python
