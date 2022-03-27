@@ -8,13 +8,15 @@ setuptools.setup(
     version="0.0.3",
     author="Ashutosh Hathidara",
     author_email="ashutoshhathidara98@gmail.com",
-    description="📦 Flexible visualization package for generating layer-wise explanations for CNNs.",
+    description="📦 Flexible visualization package for generating" +
+    "layer-wise explanations for CNNs.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ashutosh1919/explainable-cnn",
     py_modules=["explainable_cnn"],
     project_urls={
-        "Bug Tracker": "https://github.com/ashutosh1919/explainable-cnn/issues",
+        "Bug Tracker": 
+            "https://github.com/ashutosh1919/explainable-cnn/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
