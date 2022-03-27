@@ -18,7 +18,10 @@
       "contributions": [
         "code",
         "design",
-        "research"
+        "research",
+        "maintenance",
+        "tutorial",
+        "test"
       ]
     },
     {
