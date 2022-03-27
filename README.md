@@ -1,7 +1,5 @@
 # Explainable CNNs
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![Torch Version](https://img.shields.io/badge/torch-1.10.0-61DAFB.svg?style=flat-square)](#torch) [![Torchvision Version](https://img.shields.io/badge/torchvision-0.2.2-yellow.svg?style=flat-square)](#torchvision) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --> [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-) <!-- ALL-CONTRIBUTORS-BADGE:END --> [![Price](https://img.shields.io/badge/price-free-ff69b4?style=flat-square)](#price) [![Maintained](https://img.shields.io/badge/maintained-yes-green.svg?style=flat-square)](#maintained)
 
 Its a common notion that a Deep Learning model is considered as a black box. Working towards this problem, this project focusses on making the internal working of the Neural layers more transparent. In order to do so, Explainable CNNs is a plug n play component that visualizes the layers based on on their gradients and builds different representations including Saliency Map, GuidedBackPropagation, GradCam and GuidedgradCam. 
 
