@@ -36,6 +36,7 @@ guided_grad_cam = x_cnn.get_guided_grad_cam(...)
 ```
 
 <p>To see full list of arguments and their usage for all methods, please refer to <a href="https://github.com/ashutosh1919/explainable-cnn/blob/main/src/explainable_cnn/explainers/cnn_explainer.py">this file</a></p>
+<p>You may want to look at example usage in the <a href="https://github.com/ashutosh1919/explainable-cnn/blob/main/examples/explainable_cnn_usage.ipynb">example notebook</a>.</p>
 
 ### Output
 <p>Below is a comparison of the visualization generated between GradCam and GuidedGradCam </p>
