@@ -58,7 +58,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/ashutosh1919"><img src="https://avatars.githubusercontent.com/u/20843596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashutosh Hathidara</b></sub></a><br /><a href="https://github.com/ashutosh1919/explainable-cnn/commits?author=ashutosh1919" title="Code">💻</a> <a href="#design-ashutosh1919" title="Design">🎨</a> <a href="#research-ashutosh1919" title="Research">🔬</a> <a href="#maintenance-ashutosh1919" title="Maintenance">🚧</a> <a href="#tutorial-ashutosh1919" title="Tutorials">✅</a> <a href="https://github.com/ashutosh1919/explainable-cnn/commits?author=ashutosh1919" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/L-Pandey"><img src="https://avatars.githubusercontent.com/u/90662028?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lalit Pandey</b></sub></a><br /><a href="#research-L-Pandey" title="Research">🔬</a></td>
+    <td align="center"><a href="https://github.com/L-Pandey"><img src="https://avatars.githubusercontent.com/u/90662028?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lalit Pandey</b></sub></a><br /><a href="#research-L-Pandey" title="Research">🔬</a> <a href="https://github.com/ashutosh1919/explainable-cnn/commits?author=L-Pandey" title="Documentation">📖</a></td>
   </tr>
 </table>
 
