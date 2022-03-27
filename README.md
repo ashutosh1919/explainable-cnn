@@ -68,5 +68,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ### References
 
-<a href="https://arxiv.org/pdf/1610.02391.pdf"> Grad-CAM: Visual Explanations from Deep Networks
-via Gradient-based Localization</a>
+- [Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization](https://arxiv.org/pdf/1610.02391.pdf)
+- [Grad CAM demonstrations in PyTorch](https://github.com/kazuto1011/grad-cam-pytorch)
