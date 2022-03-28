@@ -1,7 +1,7 @@
 # Explainable CNNs
 [![Torch Version](https://img.shields.io/badge/torch->=1.10.0-61DAFB.svg?style=flat-square)](#torch) [![Torchvision Version](https://img.shields.io/badge/torchvision->=0.2.2-yellow.svg?style=flat-square)](#torchvision) [![Python Version](https://img.shields.io/badge/python->=3.6-blue.svg?style=flat-square)](#python) [![Price](https://img.shields.io/badge/price-free-ff69b4.svg?style=flat-square)](#price) [![Maintained](https://img.shields.io/badge/maintained-yes-green.svg?style=flat-square)](#maintained)
 
-**📦 Flexible visualization package for generating layer-wise explanations for CNNs.**
+**📦 PyTorch based visualization package for generating layer-wise explanations for CNNs.**
 
 It is a common notion that a Deep Learning model is considered as a black box. Working towards this problem, this project provides flexible and easy to use `pip` package `explainable-cnn` that will help you to create visualization for any `torch` based CNN model. Note that it uses one of the data centric approach. This project focusses on making the internal working of the Neural layers more transparent. In order to do so, `explainable-cnn` is a plug & play component that visualizes the layers based on on their gradients and builds different representations including Saliency Map, Guided BackPropagation, Grad CAM and Guided Grad CAM. 
 
