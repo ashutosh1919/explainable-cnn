@@ -33,6 +33,15 @@
         "research",
         "doc"
       ]
+    },
+    {
+      "login": "MANISH007700",
+      "name": "Manish Sharma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56771432?v=4",
+      "profile": "https://www.linkedin.com/in/manish-sharma-355ba3189/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 5,
