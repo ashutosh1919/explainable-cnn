@@ -22,7 +22,12 @@ class _BaseWrapper(object):
     def forward(self, image):
         self.image_shape = image.shape[2:]
         self.logits = self.model(image)
-        self.probs = F.softmax(self.logits, dim=1)
+        # if len(self.logits.shape) == 1:
+        print(self.logits)
+        print(self.logits.shape)
+        self.probs = self.logits
+        # else:
+            # self.probs = F.softmax(self.logits, dim=1)
         return self.probs.sort(dim=1, descending=True)  # ordered results
 
     def backward(self, ids):
