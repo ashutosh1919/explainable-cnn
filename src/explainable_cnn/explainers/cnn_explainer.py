@@ -322,6 +322,6 @@ class CNNExplainer(BaseExplainer):
 
         output_max.backward()
         saliency, _ = torch.max(augmented_image.grad.data.abs(), dim=1)
-        saliency = saliency.reshape(224, 224)
+        saliency = saliency.reshape(*input_shape)
 
         return saliency.cpu().detach().numpy()
