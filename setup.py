@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="explainable_cnn",
-    version="0.0.9",
+    version="1.0.0",
     author="Ashutosh Hathidara",
     author_email="ashutoshhathidara98@gmail.com",
     description="📦 Flexible visualization package for generating" +
