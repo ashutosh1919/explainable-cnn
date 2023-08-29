@@ -60,11 +60,10 @@ class BaseExplainer:
 
         Returns: `list` containing unique layer names.
         """
-        unique_layers = []
-        for layer in layer_names:
-            if layer not in unique_layers:
-                unique_layers.append(layer)
-        return unique_layers
+        return [
+            layer for layer in layer_names
+            if layer not in unique_layers
+        ]
 
     def get_label_name_from_index(self, index):
         """
